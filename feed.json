@@ -152,14 +152,6 @@
             "tags": []
         },
         {
-            "id": "https://hazuki.cn/gallery-post/",
-            "url": "https://hazuki.cn/gallery-post/",
-            "title": "Gallery Post",
-            "date_published": "2013-12-24T16:16:18.000Z",
-            "content_html": "<p>This post contains 4 photos:</p>\n<ul>\n<li>Widescreen wallpaper</li>\n<li>Portrait photo</li>\n<li>Dual widescreen wallpaper</li>\n<li>Small photo</li>\n</ul>\n<p>All photos should be displayed properly.</p>\n<p><em>From <span class=\"exturl\" data-url=\"aHR0cDovL3dhbGxiYXNlLmNj\">Wallbase.cc</span></em></p>\n",
-            "tags": []
-        },
-        {
             "id": "https://hazuki.cn/tag-plugins/",
             "url": "https://hazuki.cn/tag-plugins/",
             "title": "Tag Plugins",
@@ -210,6 +202,14 @@
                 "Bar",
                 "Baz"
             ]
+        },
+        {
+            "id": "https://hazuki.cn/link-post/",
+            "url": "https://hazuki.cn/link-post/",
+            "title": "Link Post",
+            "date_published": "2013-12-24T15:30:04.000Z",
+            "content_html": "<p>This is a link post. Clicking on the link should open <span class=\"exturl\" data-url=\"aHR0cDovL3d3dy5nb29nbGUuY29tLw==\">Google</span> in a new tab or window.</p>\n",
+            "tags": []
         }
     ]
 }
