@@ -91,7 +91,7 @@
 &lt;/div&gt;
 &lt;h2 id=&#34;混合结构hybrid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#混合结构hybrid&#34;&gt;#&lt;/a&gt; 混合结构（Hybrid）&lt;/h2&gt;
 &lt;p&gt;将两种结构混合在一起使用，利用两者的优点同时规避两者的缺点。如  &lt;code&gt;Napster&lt;/code&gt; 。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd12ac9ca-f19f-467d-8e22-650618d0ef02%2FUntitled.png?table=block&amp;amp;id=17d9133e-3e8a-49a3-8e4f-ef9fc32153d6&amp;amp;spaceId=3874eeca-3112-40d4-a188-71ae755e5501&amp;amp;width=1440&amp;amp;userId=2aec5b66-cedd-4945-b21f-199ea348e031&amp;amp;cache=v2&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_0.png&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;网络应用进程通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络应用进程通信&#34;&gt;#&lt;/a&gt; 网络应用进程通信&lt;/h1&gt;
 &lt;h2 id=&#34;进程间通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程间通信&#34;&gt;#&lt;/a&gt; 进程间通信&lt;/h2&gt;
 &lt;p&gt;进程间通信是网络应用的基础，而 &lt;code&gt;进程&lt;/code&gt; 是主机上运行的 &lt;code&gt;程序&lt;/code&gt; ，&lt;/p&gt;
@@ -132,7 +132,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;接收方从门外获取消息&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5af64bd1-4630-4034-8126-bbfdb9a8ac60%2FUntitled.png?table=block&amp;amp;id=9e2187a7-2cf5-43a5-90da-f8b5e335848e&amp;amp;spaceId=3874eeca-3112-40d4-a188-71ae755e5501&amp;amp;width=1150&amp;amp;userId=2aec5b66-cedd-4945-b21f-199ea348e031&amp;amp;cache=v2&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_1.png&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -155,7 +155,7 @@
 &lt;li&gt;操作系统为主机上每个需要通信的进程分配了一个 &lt;code&gt;端口号（Port number）&lt;/code&gt; 。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;因此，进程的标识符由  &lt;code&gt;IP 地址 + 端口号&lt;/code&gt; 组成，能唯一标识一个 “网络上的进程”。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc4ab4162-49e9-4cf5-8dc6-f3cf7599be90%2FUntitled.png?table=block&amp;amp;id=093fc772-9952-42ea-a41b-27a38f001399&amp;amp;spaceId=3874eeca-3112-40d4-a188-71ae755e5501&amp;amp;width=2000&amp;amp;userId=2aec5b66-cedd-4945-b21f-199ea348e031&amp;amp;cache=v2&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_2.png&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;note success no-icon&#34;&gt;
 &lt;p&gt;使用特定知名协议的应用，有其约定的端口号，不能随便使用（其他 0~65536 可用来做自己的网络应用）。&lt;/p&gt;
 &lt;ul&gt;
