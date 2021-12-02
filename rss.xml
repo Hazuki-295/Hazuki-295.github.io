@@ -99,7 +99,7 @@
 &lt;/div&gt;
 &lt;h2 id=&#34;混合结构hybrid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#混合结构hybrid&#34;&gt;#&lt;/a&gt; 混合结构（Hybrid）&lt;/h2&gt;
 &lt;p&gt;将两种结构混合在一起使用，利用两者的优点同时规避两者的缺点。如  &lt;code&gt;Napster&lt;/code&gt; 。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_0.png&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_0.png&#34; alt=&#34;Untitled&#34; width=&#34;700px&#34; /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;网络应用进程通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络应用进程通信&#34;&gt;#&lt;/a&gt; 网络应用进程通信&lt;/h1&gt;
 &lt;h2 id=&#34;进程间通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程间通信&#34;&gt;#&lt;/a&gt; 进程间通信&lt;/h2&gt;
 &lt;p&gt;进程间通信是网络应用的基础，而 &lt;code&gt;进程&lt;/code&gt; 是主机上运行的 &lt;code&gt;程序&lt;/code&gt; ，&lt;/p&gt;
@@ -435,7 +435,7 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;客户端使用代理服务器的过程：&lt;br /&gt;
-&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_10.png&#34; alt=&#34;Untitled&#34; width=&#34;400px&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_10.png&#34; alt=&#34;Untitled&#34; width=&#34;800px&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;用户设定浏览器通过 &lt;code class=&#34;aqua&#34;&gt;缓存（代理服务器）&lt;/code&gt; 进行 Web 访问&lt;/li&gt;
 &lt;li&gt;浏览器向代理服务器发送 &lt;code class=&#34;red&#34;&gt;所有的HTTP请求&lt;/code&gt;
@@ -451,7 +451,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;性能分析&lt;br /&gt;
-&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_11.png&#34; alt=&#34;Untitled&#34; width=&#34;600px&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_11.png&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;note info no-icon&#34;&gt;
 &lt;p&gt;代理服务器，也是计算机领域中广泛使用的 &lt;code class=&#34;auqa&#34;&gt;缓存技术&lt;/code&gt; （具有普遍性的设计思想）的一种实现。&lt;/p&gt;
 &lt;/div&gt;
@@ -537,7 +537,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;服务器与客户端交互过程示例：&lt;br /&gt;
-&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_12.png&#34; alt=&#34;Untitled&#34; width=&#34;600px&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_12.png&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;SMTP 协议的特点：&lt;/p&gt;
@@ -658,7 +658,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;分布式层次式数据库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分布式层次式数据库&#34;&gt;#&lt;/a&gt; 分布式层次式数据库&lt;/h2&gt;
 &lt;p&gt;客户端想要查询  &lt;code&gt;www.amazon.com&lt;/code&gt;  的 IP 地址：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_15.png&#34; alt=&#34;Untitled&#34; width=&#34;600px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_15.png&#34; alt=&#34;Untitled&#34; /&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;客户端查询 &lt;code class=&#34;aqua&#34;&gt;根服务器&lt;/code&gt; ，找到 com 域名解析服务器&lt;/li&gt;
 &lt;li&gt;客户端查询  &lt;code class=&#34;red&#34;&gt;com 域名解析服务器&lt;/code&gt; ，找到 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2FtYXpvbi5jb20=&#34;&gt;amazon.com&lt;/span&gt; 域名解析服务器&lt;/li&gt;
@@ -671,7 +671,7 @@
 &lt;li&gt;&lt;code class=&#34;blue&#34;&gt;本地域名解析服务器&lt;/code&gt; 无法解析域名时，访问 &lt;code class=&#34;red&#34;&gt;根域名服务器&lt;/code&gt; 。&lt;/li&gt;
 &lt;li&gt;根域名服务器如果不知道映射，则访问权威域名服务器获得映射，再向本地域名服务器返回映射。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_16.png&#34; alt=&#34;Untitled&#34; width=&#34;600px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_16.png&#34; alt=&#34;Untitled&#34; width=&#34;800px&#34; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class=&#34;aqua&#34;&gt;顶级域名服务器 TLD (&lt;em&gt;Top-Level Domain&lt;/em&gt;)&lt;/span&gt;&lt;br /&gt;
@@ -704,7 +704,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class=&#34;red&#34;&gt;递归查询&lt;/span&gt;：将域名解析的任务交给所联系的服务器&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_18.png&#34; alt=&#34;Untitled&#34; height=&#34;400px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/application-layer/Untitled_18.png&#34; alt=&#34;Untitled&#34; height=&#34;600px&#34; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;dns-记录缓存和更新&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns-记录缓存和更新&#34;&gt;#&lt;/a&gt; DNS 记录缓存和更新&lt;/h2&gt;
