@@ -8,9 +8,28 @@
     <author>
       <name>Hazuki 叶月</name>
     </author>
-    <updated>2021-12-04T02:35:02.000Z</updated>
+    <updated>2021-12-10T06:38:56.000Z</updated>
     <category term="关键词1" />
     <category term="关键词2" />
+    <entry>
+        <id>https://hazuki.cn/computer-science/computer-network/network-layer-1/</id>
+        <title>第4章 网络层：数据平面</title>
+        <link rel="alternate" href="https://hazuki.cn/computer-science/computer-network/network-layer-1/"/>
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
+课程：哈尔滨工业大学 计算机网络&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVVwNDExWjdoQz9zaGFyZV9zb3VyY2U9Y29weV93ZWI=&#34;&gt; https://www.bilibili.com/video/BV1Up411Z7hC?share_source=copy_web&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h1&gt;
+&lt;h2 id=&#34;转发和路由&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#转发和路由&#34;&gt;#&lt;/a&gt; 转发和路由&lt;/h2&gt;
+&lt;h2 id=&#34;网络服务模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络服务模型&#34;&gt;#&lt;/a&gt; 网络服务模型&lt;/h2&gt;
+</content>
+        <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
+        <category term="计算机网络" scheme="https://hazuki.cn/categories/computer-science/computer-network/" />
+        <category term="计算机网络" scheme="https://hazuki.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+        <category term="网络层" scheme="https://hazuki.cn/tags/%E7%BD%91%E7%BB%9C%E5%B1%82/" />
+        <updated>2021-12-10T06:38:56.000Z</updated>
+    </entry>
     <entry>
         <id>https://hazuki.cn/computer-science/computer-network/transport-layer/</id>
         <title>第3章 传输层</title>
@@ -45,7 +64,7 @@
 &lt;h2 id=&#34;传输层服务概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#传输层服务概述&#34;&gt;#&lt;/a&gt; 传输层服务概述&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;传输层协议为运行在 &lt;code class=&#34;aqua&#34;&gt;不同 host 上(end-to-end)&lt;/code&gt;  的 &lt;code class=&#34;purple&#34;&gt;进程&lt;/code&gt; 提供了一种 &lt;code class=&#34;red&#34;&gt;逻辑通信机制&lt;/code&gt; ，由此应用程序可以不必知道底层物理基础设施进行数据传输的细节。&lt;/p&gt;
+&lt;p&gt;传输层协议为运行在 &lt;code class=&#34;aqua&#34;&gt;不同主机上(end-to-end)&lt;/code&gt;  的 &lt;code class=&#34;purple&#34;&gt;进程&lt;/code&gt; 提供了一种 &lt;code class=&#34;red&#34;&gt;逻辑通信机制&lt;/code&gt; ，由此应用程序可以不必知道底层物理基础设施进行数据传输的细节。&lt;/p&gt;
 &lt;div class=&#34;note info no-icon&#34;&gt;
 &lt;p&gt;&lt;code class=&#34;purple&#34;&gt;逻辑连接&lt;/code&gt; ：从&lt;span class=&#34;blue&#34;&gt;应用程序&lt;/span&gt;的视角，两个运行进程的主机之间&lt;span class=&#34;aqua&#34;&gt;仿佛是直接连接的&lt;/span&gt;，不关心物理距离、途径多少路由器等。&lt;/p&gt;
 &lt;/div&gt;
@@ -57,14 +76,14 @@
 &lt;li&gt;
 &lt;p&gt;&lt;span class=&#34;blue&#34;&gt;端系统&lt;/span&gt;运行传输层协议&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;aqua&#34;&gt;发送方 (sender)&lt;/span&gt;：将应用递交的 &lt;code class=&#34;blue&#34;&gt;message(消息)&lt;/code&gt;  分成一个或多个的 &lt;code class=&#34;orange&#34;&gt;segement(报文段)&lt;/code&gt; ，并向下传给&lt;span class=&#34;red&#34;&gt;网络层&lt;/span&gt;&lt;div class=&#34;note info no-icon&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;aqua&#34;&gt;发送方 (sender)&lt;/span&gt;：将应用递交的 &lt;code class=&#34;blue&#34;&gt;message(消息)&lt;/code&gt;  分成一个或多个的 &lt;code class=&#34;orange&#34;&gt;segment(报文段)&lt;/code&gt; ，并向下传给&lt;span class=&#34;red&#34;&gt;网络层&lt;/span&gt;&lt;div class=&#34;note info no-icon&#34;&gt;
 &lt;p&gt;如何实现的？&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;This is done by (possibly) breaking the application messages into  &lt;code&gt;smaller chunks&lt;/code&gt;  and adding a  &lt;code&gt;transport-layer header&lt;/code&gt;  to each chunk to create the transport-layer segment.&lt;/li&gt;
+&lt;li&gt;This is done by (possibly) breaking the application messages into  &lt;code class=&#34;aqua&#34;&gt;smaller chunks&lt;/code&gt;  and adding a  &lt;code class=&#34;red&#34;&gt;transport-layer header&lt;/code&gt;  to each chunk to create the transport-layer segment.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;red&#34;&gt;接收方 (receiver)&lt;/span&gt;：将接受到的 &lt;code class=&#34;orange&#34;&gt;segement&lt;/code&gt;  组装成 &lt;code class=&#34;blue&#34;&gt;message&lt;/code&gt; ，并向上交给&lt;span class=&#34;aqua&#34;&gt;应用层&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;red&#34;&gt;接收方 (receiver)&lt;/span&gt;：将接受到的 &lt;code class=&#34;orange&#34;&gt;segment&lt;/code&gt;  组装成 &lt;code class=&#34;blue&#34;&gt;message&lt;/code&gt; ，并向上交给&lt;span class=&#34;aqua&#34;&gt;应用层&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -81,13 +100,13 @@
 &lt;ol&gt;
 &lt;li&gt;位于&lt;span class=&#34;aqua&#34;&gt;网络层之上&lt;/span&gt;，&lt;span class=&#34;blue&#34;&gt;依赖于&lt;/span&gt;网络层服务
 &lt;ul&gt;
-&lt;li&gt;传输层能提供的服务，&lt;span class=&#34;purple&#34;&gt;受到网络层服务模型的限制&lt;/span&gt;，如 &lt;code&gt;时延保障&lt;/code&gt; 、 &lt;code&gt;带宽保障&lt;/code&gt; &lt;br /&gt;
+&lt;li&gt;传输层能提供的服务，受到&lt;span class=&#34;purple&#34;&gt;网络层服务模型&lt;/span&gt;的&lt;span class=&#34;red&#34;&gt;限制&lt;/span&gt;，如 &lt;code class=&#34;orange&#34;&gt;时延保障&lt;/code&gt; 、 &lt;code class=&#34;blue&#34;&gt;带宽保障&lt;/code&gt; &lt;br /&gt;
 （如网络层没有提供，则传输层亦无法提供）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;对网络层服务进行（可能的）&lt;span class=&#34;red&#34;&gt;增强&lt;/span&gt;
 &lt;ul&gt;
-&lt;li&gt;某些网络层不提供的服务，能够由传输层来提供，如 &lt;code&gt;可靠传输&lt;/code&gt; 、 &lt;code&gt;加密&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;某些网络层不提供的服务，能够由传输层来提供，如 &lt;code class=&#34;aqua&#34;&gt;可靠传输&lt;/code&gt; 、 &lt;code class=&#34;pink&#34;&gt;加密&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -142,7 +161,7 @@
 &lt;p&gt;一个应用程序 &lt;code class=&#34;blue&#34;&gt;进程&lt;/code&gt; 可以拥有 &lt;code class=&#34;aqua&#34;&gt;1个或多个&lt;/code&gt; 套接字，因此，接收方的传输层 &lt;code class=&#34;red&#34;&gt;不直接&lt;/code&gt; 把数据交给进程，而是交给中间的 &lt;code class=&#34;aqua&#34;&gt;套接字&lt;/code&gt; 。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在任意时刻， &lt;code class=&#34;red&#34;&gt;接收方的主机&lt;/code&gt; 上存在着多个套接字，每个套接字有一个独一无二的 &lt;code class=&#34;green&#34;&gt;标识符(identifier)&lt;/code&gt; 。&lt;/li&gt;
-&lt;li&gt;标识符的 &lt;code class=&#34;orange&#34;&gt;格式&lt;/code&gt; 取决于该套接字是  &lt;code&gt;TCP套接字&lt;/code&gt; 还是 &lt;code&gt;UDP套接字&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;标识符的 &lt;code class=&#34;orange&#34;&gt;格式&lt;/code&gt; 取决于该套接字是  &lt;code class=&#34;blue&#34;&gt;TCP 套接字&lt;/code&gt; 还是 &lt;code class=&#34;purple&#34;&gt;UDP 套接字&lt;/code&gt; 。&lt;span class=&#34;red&#34;&gt;(★)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;p&gt;如图所示：&lt;/p&gt;
@@ -152,7 +171,7 @@
 &lt;p&gt;The job of gathering data chunks at the source host from  &lt;code class=&#34;red&#34;&gt;different sockets&lt;/code&gt; , encapsulating each data chunk with  &lt;code class=&#34;aqua&#34;&gt;header information&lt;/code&gt;  (that will later be used in demultiplexing) to create  &lt;code&gt;segments&lt;/code&gt; , and passing the segments to the network layer is called &lt;span class=&#34;blue&#34;&gt;multiplexing&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;red&#34;&gt;接收端&lt;/span&gt;进行&lt;span class=&#34;purple&#34;&gt;多路分用&lt;/span&gt;：传输层依据 &lt;code class=&#34;aqua&#34;&gt;头部信息&lt;/code&gt; ，将 &lt;code&gt;segment&lt;/code&gt;  中的数据交给 &lt;code&gt;正确的socket&lt;/code&gt; ，即不同的应用进程。&lt;div class=&#34;note info no-icon&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;red&#34;&gt;接收端&lt;/span&gt;进行&lt;span class=&#34;purple&#34;&gt;多路分用&lt;/span&gt;：传输层依据 &lt;code class=&#34;aqua&#34;&gt;头部信息&lt;/code&gt; ，将 &lt;code&gt;segment&lt;/code&gt;  中的数据交给 &lt;code&gt;正确的 socket&lt;/code&gt; ，即不同的应用进程。&lt;div class=&#34;note info no-icon&#34;&gt;
 &lt;p&gt;This job of delivering the  &lt;code class=&#34;red&#34;&gt;data&lt;/code&gt;  in a transport-layer  &lt;code class=&#34;blue&#34;&gt;segment&lt;/code&gt;  to the  &lt;code&gt;correct socket&lt;/code&gt;  is called &lt;span class=&#34;purple&#34;&gt;demultiplexing&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/li&gt;
@@ -165,7 +184,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;每个  &lt;code blue=&#34;&#34;&gt;segment&lt;/code&gt;  有指明特定 socket 的特殊 &lt;code class=&#34;purple&#34;&gt;字段(fields)&lt;/code&gt; ，如图所示，为 &lt;code class=&#34;blue&#34;&gt;源端口号&lt;/code&gt; 和 &lt;code class=&#34;red&#34;&gt;目的端口号&lt;/code&gt; 。&lt;br /&gt;
-（传输层报文段所共有的，除此之外， &lt;code&gt;TCP&lt;/code&gt;  和 &lt;code&gt;UDP&lt;/code&gt;  还有其他的字段）&lt;/p&gt;
+（传输层报文段所共有的，除此之外， &lt;code class=&#34;blue&#34;&gt;TCP&lt;/code&gt;  和 &lt;code class=&#34;purple&#34;&gt;UDP&lt;/code&gt;  还有其他的字段）&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/transport-layer/Untitled_2.png&#34; alt=&#34;Untitled_2&#34; width=&#34;600px&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;note info no-icon&#34;&gt;
 &lt;p&gt;Each port number is a  &lt;code&gt;16-bit&lt;/code&gt;  number, ranging from  &lt;code&gt;0 to 65535&lt;/code&gt; . The port numbers ranging from  &lt;code&gt;0 to 1023&lt;/code&gt;  are called  &lt;code&gt;well-known&lt;/code&gt;  port numbers and are restricted, which means that they are reserved for use by well-known application protocols such as HTTP (which uses port number 80) and FTP (which uses port number 21).&lt;/p&gt;
@@ -176,7 +195,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code class=&#34;blue&#34;&gt;Each socket&lt;/code&gt;  in the host could be assigned a  &lt;code class=&#34;aqua&#34;&gt;port number&lt;/code&gt; , and when a segment arrives at the host, the transport layer examines the  &lt;code class=&#34;red&#34;&gt;destination port number&lt;/code&gt;  in the segment and directs the segment to the corresponding socket. The segment’s data then passes through the socket into the attached process.&lt;/li&gt;
 &lt;li&gt;As we’ll see, this is basically how  &lt;code class=&#34;purple&#34;&gt;UDP&lt;/code&gt;  does it. &lt;span class=&#34;red&#34;&gt;(★)&lt;/span&gt;&lt;br /&gt;
-However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=&#34;green&#34;&gt;TCP&lt;/code&gt;  is yet more subtle.&lt;/li&gt;
+However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=&#34;blue&#34;&gt;TCP&lt;/code&gt;  is yet more subtle.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;无连接分用面向-udp-协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无连接分用面向-udp-协议&#34;&gt;#&lt;/a&gt; 无连接分用（面向 UDP 协议）&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;UDP&lt;/code&gt;  多路复用和解复用过程：&lt;/p&gt;
@@ -217,7 +236,7 @@ However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=
 &lt;p&gt;回顾之前 Section 2.7.2 的 TCP client-server 套接字编程示例：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;The TCP server application has a  &lt;code class=&#34;blue&#34;&gt;welcoming socket&lt;/code&gt; , that waits for  &lt;code class=&#34;orange&#34;&gt;connection-establishment requests&lt;/code&gt;  from TCP clients on  &lt;code class=&#34;aqua&#34;&gt;port number 12000&lt;/code&gt; .&lt;/p&gt;
+&lt;p&gt;The TCP server application has a  &lt;code class=&#34;blue&#34;&gt;“welcoming socket”&lt;/code&gt; , that waits for  &lt;code class=&#34;orange&#34;&gt;connection-establishment requests&lt;/code&gt;  from TCP clients on  &lt;code class=&#34;aqua&#34;&gt;port number 12000&lt;/code&gt; .&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The TCP client creates a socket and sends  &lt;code class=&#34;red&#34;&gt;a connection establishment request segment&lt;/code&gt;  with the lines:&lt;/p&gt;
@@ -225,7 +244,7 @@ However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;A connection-establishment request is nothing more than  &lt;code class=&#34;red&#34;&gt;a TCP segment&lt;/code&gt;  with  &lt;code class=&#34;aqua&#34;&gt;destination port number 12000&lt;/code&gt;  and a special  &lt;code class=&#34;purple&#34;&gt;connection-establishment bit set&lt;/code&gt;  in the TCP header (discussed in Section 3.5). The segment also includes a source port number that was chosen by the client.&lt;br /&gt;
-（The struct of  &lt;code class=&#34;aqua&#34;&gt;connection-request segement&lt;/code&gt; ）&lt;/p&gt;
+（The struct of  &lt;code class=&#34;aqua&#34;&gt;connection-request segment&lt;/code&gt; ）&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;When the host  &lt;code class=&#34;red&#34;&gt;operating system&lt;/code&gt;  of the computer running the server process receives the incoming connection-request segment with destination port 12000, it  &lt;code class=&#34;orange&#34;&gt;locates the server process&lt;/code&gt; &lt;span class=&#34;red&#34;&gt;(★)&lt;/span&gt; that is waiting to accept a connection on port number 12000. The server process then  &lt;code class=&#34;blue&#34;&gt;creates a new socket&lt;/code&gt; :&lt;/p&gt;
@@ -253,13 +272,13 @@ However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=
 &lt;/ul&gt;
 &lt;h1 id=&#34;无连接传输udp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无连接传输udp&#34;&gt;#&lt;/a&gt; 无连接传输：UDP&lt;/h1&gt;
 &lt;div class=&#34;note info no-icon&#34;&gt;
-&lt;p&gt;引言：假如你对设计一个 &lt;code class=&#34;pink&#34;&gt;不提供不必要服务&lt;/code&gt; 的 &lt;code class=&#34;blue&#34;&gt;最简化&lt;/code&gt; 的传输层协议感兴趣，你将打算怎么做呢？&lt;/p&gt;
+&lt;p&gt;引言：假如你对设计一个 &lt;code class=&#34;pink&#34;&gt;只提供必要服务(no-frills)&lt;/code&gt;  的 &lt;code class=&#34;blue&#34;&gt;最基本(bare-bones)&lt;/code&gt;  的传输层协议感兴趣，你将打算怎么做呢？&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;概述-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述-2&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
 &lt;p&gt;如前所述， &lt;code&gt;UDP&lt;/code&gt;  基本上基于 &lt;code class=&#34;blue&#34;&gt;IP 协议&lt;/code&gt; ，没有做太多的扩展，它&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;只提供传输层 &lt;code&gt;最基本&lt;/code&gt; 的服务： &lt;code class=&#34;pink&#34;&gt;多路复用/分用&lt;/code&gt; ，以及简单的 &lt;code class=&#34;aqua&#34;&gt;差错检测(error checking)&lt;/code&gt; ，除此之外不做任何事。&lt;/li&gt;
-&lt;li&gt;基本上将 &lt;code class=&#34;blue&#34;&gt;网络层服务&lt;/code&gt;  “暴露” 给了应用层，留给应用层 &lt;code class=&#34;red&#34;&gt;掌控数据传输&lt;/code&gt; 的能力。&lt;/li&gt;
+&lt;li&gt;只是做了传输协议能做的 &lt;code class=&#34;red&#34;&gt;最少工作&lt;/code&gt; ： &lt;code class=&#34;pink&#34;&gt;多路复用/分用&lt;/code&gt; ，以及简单的 &lt;code class=&#34;aqua&#34;&gt;差错检测(error checking)&lt;/code&gt; ，除此之外不做任何事。&lt;/li&gt;
+&lt;li&gt;基本上将 &lt;code class=&#34;blue&#34;&gt;网络层服务&lt;/code&gt;  “暴露” 给了应用层，应用程序几乎是直接与  &lt;code&gt;IP&lt;/code&gt;  打交道。&lt;/li&gt;
 &lt;li&gt;基于 IP 协议，也提供  &lt;code class=&#34;aqua&#34;&gt;“尽力而为(best-effort)”&lt;/code&gt;  的服务，即 UDP 段可能 &lt;code class=&#34;purple&#34;&gt;丢失&lt;/code&gt; ，也可能 &lt;code class=&#34;aqua&#34;&gt;乱序&lt;/code&gt; 。&lt;/li&gt;
 &lt;li&gt;&lt;code class=&#34;purple&#34;&gt;无连接&lt;/code&gt; 服务，UDP 发送方 / 接收方之间 &lt;code&gt;不需要握手&lt;/code&gt; ，每个 UDP 段的处理独立于其他段。&lt;/li&gt;
 &lt;/ul&gt;
@@ -278,14 +297,14 @@ However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=
  &lt;code class=&#34;aqua&#34;&gt;TCP&lt;/code&gt;  在开始数据传输前会进行 &lt;code class=&#34;aqua&#34;&gt;三次握手&lt;/code&gt; 。而 &lt;code class=&#34;purple&#34;&gt;UDP&lt;/code&gt;  不需要任何准备即可进行数据传输，因此不会引入建立连接的时延。
 &lt;ul&gt;
 &lt;li&gt;这可能是 &lt;code class=&#34;pink&#34;&gt;DNS&lt;/code&gt;  运行在 UDP 之上而不是 TCP 之上的主要原因：如果运行在 TCP 之上，则 DNS 会 &lt;code class=&#34;red&#34;&gt;慢得多&lt;/code&gt; 。&lt;/li&gt;
-&lt;li&gt;&lt;code class=&#34;blue&#34;&gt;HTTP&lt;/code&gt;  使用 TCP 而不是 UDP，因为 &lt;code class=&#34;red&#34;&gt;可靠性&lt;/code&gt; 对于包含文字的 &lt;code class=&#34;aqua&#34;&gt;Web网页&lt;/code&gt; 来说是至关重要的。&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;li&gt;&lt;code class=&#34;blue&#34;&gt;HTTP&lt;/code&gt;  使用 TCP 而不是 UDP，因为 &lt;code class=&#34;red&#34;&gt;可靠性&lt;/code&gt; 对于包含文本的 &lt;code class=&#34;aqua&#34;&gt;Web 网页&lt;/code&gt; 来说是至关重要的。&lt;div class=&#34;note primary no-icon&#34;&gt;
 &lt;p&gt;但正如之前所讨论的，HTTP 中的 &lt;code class=&#34;aqua&#34;&gt;TCP 连接建立时延&lt;/code&gt; 对于 &lt;code&gt;下载 Web 文档的时延&lt;/code&gt; 来说是一个重要的贡献因素。确实如此，谷歌的  &lt;code class=&#34;red&#34;&gt;Chrome 浏览器&lt;/code&gt; 使用 &lt;code class=&#34;pink&#34;&gt;QUIC 协议(Quick UDP Internet Connection)&lt;/code&gt; ，该协议使用 &lt;code&gt;UDP&lt;/code&gt;  作为其底层的传输协议，并在 UDP 之上的 &lt;code class=&#34;blue&#34;&gt;应用层协议&lt;/code&gt; 上实现 &lt;code&gt;可靠性&lt;/code&gt; 。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;实现简单，无需&lt;span class=&#34;aqua&#34;&gt;维护连接状态&lt;/span&gt;&lt;br /&gt;
- &lt;code class=&#34;aqua&#34;&gt;TCP&lt;/code&gt;  需要在 &lt;code class=&#34;blue&#34;&gt;端系统&lt;/code&gt; 中维护连接状态（&lt;span class=&#34;red&#34;&gt;缓冲区&lt;/span&gt;和&lt;span class=&#34;aqua&#34;&gt;参数&lt;/span&gt;），以实现可靠传输和拥塞控制，而 &lt;code class=&#34;purple&#34;&gt;UDP&lt;/code&gt;  不需要。
+ &lt;code class=&#34;aqua&#34;&gt;TCP&lt;/code&gt;  需要在 &lt;code class=&#34;blue&#34;&gt;端系统&lt;/code&gt; 中维护连接状态（&lt;span class=&#34;red&#34;&gt;缓冲区&lt;/span&gt; 和 &lt;span class=&#34;aqua&#34;&gt;参数&lt;/span&gt;），以实现可靠传输和拥塞控制，而 &lt;code class=&#34;purple&#34;&gt;UDP&lt;/code&gt;  不需要。
 &lt;ul&gt;
 &lt;li&gt;因此，对于&lt;span class=&#34;red&#34;&gt;专用于特定应用程序&lt;/span&gt;的服务器来说，如果该应用运行在 &lt;code class=&#34;purple&#34;&gt;UDP&lt;/code&gt;  之上，那么相比 &lt;code class=&#34;aqua&#34;&gt;TCP&lt;/code&gt; ，它可以为 &lt;code&gt;更多的&lt;/code&gt; 活跃客户端提供服务。&lt;/li&gt;
 &lt;/ul&gt;
@@ -296,9 +315,9 @@ However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=
 &lt;li&gt;
 &lt;p&gt;补充说明&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;正如我们在第 2 章中所学的， &lt;code class=&#34;aqua&#34;&gt;早期版本&lt;/code&gt; 的 HTTP 运行在 &lt;code&gt;TCP&lt;/code&gt;  之上，但是 &lt;code class=&#34;red&#34;&gt;更近期版本&lt;/code&gt; 的 HTTP 则运行在 &lt;code&gt;UDP&lt;/code&gt;  之上，并在 &lt;code class=&#34;blue&#34;&gt;应用层&lt;/code&gt; 上实现自己的差错控制和拥塞控制。&lt;/li&gt;
-&lt;li&gt;UDP 也用于传输 &lt;code&gt;网络管理数据(Network managment data)&lt;/code&gt; (SNMP)，在这种情况下 &lt;code&gt;UDP&lt;/code&gt;  相比 &lt;code&gt;TCP&lt;/code&gt;  更合适，因为 &lt;code class=&#34;blue&#34;&gt;网络管理应用程序&lt;/code&gt; 必须经常在网络处于 &lt;code class=&#34;pink&#34;&gt;紧张状态&lt;/code&gt; 时运行（精确地说，在可靠的、带拥塞控制的数据传输难以实现时）。&lt;/li&gt;
-&lt;li&gt;UDP 中缺乏 &lt;code class=&#34;orange&#34;&gt;拥塞控制&lt;/code&gt; ，可能导致 &lt;code&gt;高丢失率(high lose rates)&lt;/code&gt;  以及 &lt;code class=&#34;aqua&#34;&gt;TCP会话的挤出(crowding out)&lt;/code&gt; （链路拥塞导致 TCP 减缓其发送速率）。&lt;/li&gt;
+&lt;li&gt;正如我们在第 2 章中所学的， &lt;code class=&#34;aqua&#34;&gt;早期版本 (HTTP/1.1, HTTP/2)&lt;/code&gt;  的 HTTP 运行在 &lt;code&gt;TCP&lt;/code&gt;  之上，但是 &lt;code class=&#34;red&#34;&gt;更近期版本 (HTTP/3)&lt;/code&gt;  的 HTTP 则运行在 &lt;code&gt;UDP&lt;/code&gt;  之上，并在 &lt;code class=&#34;blue&#34;&gt;应用层&lt;/code&gt; 上实现自己的差错控制和拥塞控制。&lt;/li&gt;
+&lt;li&gt;UDP 也用于携带 &lt;code&gt;网络管理数据 (Network managment data)&lt;/code&gt; (SNMP)，在这种情况下 &lt;code&gt;UDP&lt;/code&gt;  相比 &lt;code&gt;TCP&lt;/code&gt;  更合适，因为 &lt;code class=&#34;blue&#34;&gt;网络管理应用程序&lt;/code&gt; 经常在网络处于 &lt;code class=&#34;pink&#34;&gt;紧张状态&lt;/code&gt; 时必须运行（精确地说，在可靠的、带拥塞控制的数据传输难以实现时）。&lt;/li&gt;
+&lt;li&gt;虽然 &lt;code class=&#34;purple&#34;&gt;多媒体应用&lt;/code&gt; 通常运行在 UDP 之上，但这样做是有争议的。UDP 中缺乏 &lt;code class=&#34;orange&#34;&gt;拥塞控制&lt;/code&gt; ，可能导致 UDP 发送方 / 接收方之间的 &lt;code&gt;高丢失率 (high lose rates)&lt;/code&gt;  以及 &lt;code class=&#34;aqua&#34;&gt;TCP 会话的挤出 (crowding out)&lt;/code&gt; （链路拥塞，导致 TCP 减缓其发送速率）。&lt;/li&gt;
 &lt;li&gt;使用 &lt;code&gt;UDP&lt;/code&gt;  的应用程序是可以实现 &lt;code class=&#34;aqua&#34;&gt;可靠数据传输&lt;/code&gt; 的，这可以通过在 &lt;code class=&#34;red&#34;&gt;应用程序自身&lt;/code&gt; 中建立 &lt;code class=&#34;aqua&#34;&gt;可靠性&lt;/code&gt; 机制来完成。&lt;div class=&#34;note primary no-icon&#34;&gt;
 &lt;p&gt;Nevertheless, ­building reliability &lt;span class=&#34;red&#34;&gt;directly into the application&lt;/span&gt; allows the application to &lt;span class=&#34;aqua&#34;&gt;“have its cake and eat it too.”&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -312,9 +331,63 @@ However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=
 &lt;/ol&gt;
 &lt;h2 id=&#34;udp-报文段结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udp-报文段结构&#34;&gt;#&lt;/a&gt; UDP 报文段结构&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/computer-network/transport-layer/Untitled_5.png&#34; alt=&#34;Untitled_5&#34; width=&#34;600px&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;aqua&#34;&gt;数据字段 (data filed)&lt;/span&gt;：由 &lt;code class=&#34;blue&#34;&gt;应用层数据&lt;/code&gt; 填充。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;red&#34;&gt;UDP 报头 (UDP header)&lt;/span&gt;：由 &lt;code&gt;4&lt;/code&gt;  个字段组成，每个字段由  &lt;code class=&#34;aqua&#34;&gt;2 bytes&lt;/code&gt;  组成。
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&#34;blue&#34;&gt;源端口号&lt;/code&gt;  和  &lt;code class=&#34;red&#34;&gt;目的端口号&lt;/code&gt; ：用于接收端 &lt;code class=&#34;red&#34;&gt;解复用&lt;/code&gt; 和作为 &lt;code class=&#34;blue&#34;&gt;返回地址的一部分&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;code class=&#34;orange&#34;&gt;长度字段 (Length)&lt;/code&gt; ：指示了 UDP 报文段中的 &lt;code class=&#34;aqua&#34;&gt;字节数&lt;/code&gt; （&lt;span class=&#34;pink&#34;&gt;头部&lt;/span&gt; + &lt;span class=&#34;blue&#34;&gt;数据&lt;/span&gt;）。&lt;div class=&#34;note success no-icon&#34;&gt;
+&lt;p&gt;由于不同报文段之间 &lt;code class=&#34;blue&#34;&gt;数据字段&lt;/code&gt; 的大小可能不同，需要一个 &lt;code class=&#34;red&#34;&gt;明确的&lt;/code&gt; 长度值。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&#34;red&#34;&gt;校验和字段 (Checksum)&lt;/code&gt; ：被 &lt;code class=&#34;aqua&#34;&gt;接收方&lt;/code&gt; 用来检测 &lt;code class=&#34;purple&#34;&gt;错误是否被引入&lt;/code&gt; 到报文段中。&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;实际上，除了 &lt;code&gt;UDP 报文段&lt;/code&gt; 外， &lt;code class=&#34;blue&#34;&gt;IP 头部&lt;/code&gt; 中的 &lt;code&gt;几个字段&lt;/code&gt; 也会被用于计算校验和。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;校验和checksum&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#校验和checksum&#34;&gt;#&lt;/a&gt; 校验和（checksum）&lt;/h2&gt;
+&lt;p&gt;UDP 校验和用于 &lt;code class=&#34;aqua&#34;&gt;差错检测&lt;/code&gt; ，即确定 UDP 报文段中的 &lt;code class=&#34;blue&#34;&gt;比特&lt;/code&gt; 在传输过程中是否发生了 &lt;code&gt;改变&lt;/code&gt; （例如，由于 &lt;code class=&#34;purple&#34;&gt;链路中的噪声&lt;/code&gt; 或者存储在 &lt;code class=&#34;orange&#34;&gt;路由器&lt;/code&gt; 中时引入问题）。校验和的计算和使用：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;UDP 发送方将报文段中的所有 &lt;code class=&#34;aqua&#34;&gt;16 比特字(16-bit words)&lt;/code&gt;  的 &lt;code class=&#34;red&#34;&gt;和(sum)&lt;/code&gt;  进行 &lt;code class=&#34;purple&#34;&gt;反码运算(one&#39;s complement)&lt;/code&gt; ，求和时遇到的 &lt;code class=&#34;blue&#34;&gt;任何溢出&lt;/code&gt; 都被 &lt;code class=&#34;pink&#34;&gt;回卷(wrapped around)&lt;/code&gt; 。&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;UDP at the sender side performs the  &lt;code&gt;1s complement&lt;/code&gt;  of the sum of all the  &lt;code class=&#34;aqua&#34;&gt;16-bit words&lt;/code&gt;  in the segment, with  &lt;code class=&#34;blue&#34;&gt;any overflow&lt;/code&gt;  encountered during the sum being  &lt;code class=&#34;pink&#34;&gt;wrapped around&lt;/code&gt; .&lt;/p&gt;
+&lt;/div&gt;
+计算得到的结果被放在 UDP 报文段的 &lt;code class=&#34;aqua&#34;&gt;校验和字段&lt;/code&gt; 中。&lt;/li&gt;
+&lt;li&gt;在 UDP 接收方，将 &lt;code class=&#34;pink&#34;&gt;所有的16比特字&lt;/code&gt;  (包括 &lt;code class=&#34;blue&#34;&gt;校验和&lt;/code&gt; ) 加在一起，&lt;span class=&#34;red&#34;&gt;(★)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;如果得到的结果为 &lt;code class=&#34;orange&#34;&gt;全1&lt;/code&gt; ，则说明该分组中 &lt;code class=&#34;aqua&#34;&gt;没有差错&lt;/code&gt; 被引入。&lt;/li&gt;
+&lt;li&gt;如果得到的结果中的 &lt;code class=&#34;purple&#34;&gt;比特之一为 0&lt;/code&gt; ，那么我们就知道该分组中 &lt;code class=&#34;red&#34;&gt;已经出现了差错&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note success no-icon&#34;&gt;
+&lt;p&gt;尽管 UDP 提供 &lt;code class=&#34;aqua&#34;&gt;差错检测&lt;/code&gt; ，但它不做任何 &lt;code class=&#34;blue&#34;&gt;差错恢复&lt;/code&gt; （实际上也 &lt;code class=&#34;pink&#34;&gt;无能为力&lt;/code&gt; ）。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;div class=&#34;note info no-icon&#34;&gt;
+&lt;p&gt;为什么要在 &lt;code class=&#34;red&#34;&gt;传输层&lt;/code&gt; 进行差错检测？许多 &lt;code class=&#34;aqua&#34;&gt;链路层协议&lt;/code&gt; （包括流行的 &lt;code class=&#34;orange&#34;&gt;以太网协议 (Ethernet protocol)&lt;/code&gt; ）不也提供了差错检测？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&#34;aqua&#34;&gt;不能保证&lt;/code&gt; 源和目的之间的 &lt;code class=&#34;pink&#34;&gt;所有链路&lt;/code&gt; 都提供了差错检测。&lt;/li&gt;
+&lt;li&gt;当数据报存储在 &lt;code class=&#34;purple&#34;&gt;路由器的内存&lt;/code&gt; 中时，也有可能 &lt;code class=&#34;blue&#34;&gt;引入比特差错&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given that neither  &lt;code class=&#34;pink&#34;&gt;link-by-link reliability&lt;/code&gt;  nor  &lt;code class=&#34;purple&#34;&gt;in-memory error detection&lt;/code&gt;  is guaranteed, UDP must provide error detection at the  &lt;code class=&#34;blue&#34;&gt;transport layer&lt;/code&gt; , on an  &lt;code class=&#34;red&#34;&gt;end-end basis&lt;/code&gt; &lt;span class=&#34;red&#34;&gt;(★)&lt;/span&gt;, if the end-end data transfer service is to provide error detection.&lt;/p&gt;
+&lt;p&gt;这是一个在系统设计中被颂为 &lt;code class=&#34;aqua&#34;&gt;端到端原则 (end-end principle)&lt;/code&gt;  的例子，该原则指出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Since certain functionality (error detection, in this case)  &lt;code class=&#34;red&#34;&gt;must be implemented on an end-end basis&lt;/code&gt; : “functions placed at the  &lt;code class=&#34;blue&#34;&gt;lower levels&lt;/code&gt;  may be  &lt;code class=&#34;pink&#34;&gt;redundant&lt;/code&gt;  or of  &lt;code class=&#34;grey&#34;&gt;little value&lt;/code&gt;  when compared to the cost of providing them at the  &lt;code class=&#34;aqua&#34;&gt;higher level&lt;/code&gt; .”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为 &lt;code class=&#34;blue&#34;&gt;IP&lt;/code&gt;  是被假定为可以运行在几乎&lt;span class=&#34;red&#34;&gt;任何第 2 层协议 (layer-2 protocol) 之上&lt;/span&gt;的（亦即 &lt;code class=&#34;aqua&#34;&gt;链路层协议&lt;/code&gt; 可能不提供差错检测），在 &lt;code class=&#34;blue&#34;&gt;传输层&lt;/code&gt; 提供 &lt;code class=&#34;aqua&#34;&gt;差错检测&lt;/code&gt; 以作为 &lt;code class=&#34;pink&#34;&gt;安全措施&lt;/code&gt; 是很有用的。&lt;/p&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;可靠数据传输原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可靠数据传输原理&#34;&gt;#&lt;/a&gt; 可靠数据传输原理&lt;/h1&gt;
+&lt;h2 id=&#34;带流水线的可靠数据传输协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#带流水线的可靠数据传输协议&#34;&gt;#&lt;/a&gt; 带流水线的可靠数据传输协议&lt;/h2&gt;
+&lt;h2 id=&#34;go-back-ngbn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#go-back-ngbn&#34;&gt;#&lt;/a&gt; Go-Back-N(GBN)&lt;/h2&gt;
+&lt;h2 id=&#34;selective-repeatsr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#selective-repeatsr&#34;&gt;#&lt;/a&gt; Selective Repeat(SR)&lt;/h2&gt;
 &lt;h1 id=&#34;面向连接的传输tcp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向连接的传输tcp&#34;&gt;#&lt;/a&gt; 面向连接的传输：TCP&lt;/h1&gt;
+&lt;h2 id=&#34;tcp-连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp-连接&#34;&gt;#&lt;/a&gt; TCP 连接&lt;/h2&gt;
+&lt;h2 id=&#34;tcp-报文段结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp-报文段结构&#34;&gt;#&lt;/a&gt; TCP 报文段结构&lt;/h2&gt;
+&lt;h2 id=&#34;可靠数据传输&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可靠数据传输&#34;&gt;#&lt;/a&gt; 可靠数据传输&lt;/h2&gt;
+&lt;h2 id=&#34;流量控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流量控制&#34;&gt;#&lt;/a&gt; 流量控制&lt;/h2&gt;
+&lt;h2 id=&#34;tcp-连接管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp-连接管理&#34;&gt;#&lt;/a&gt; TCP 连接管理&lt;/h2&gt;
 &lt;h1 id=&#34;拥塞控制原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞控制原理&#34;&gt;#&lt;/a&gt; 拥塞控制原理&lt;/h1&gt;
 &lt;h1 id=&#34;tcp-拥塞控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp-拥塞控制&#34;&gt;#&lt;/a&gt; TCP 拥塞控制&lt;/h1&gt;
 </content>
