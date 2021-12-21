@@ -10,10 +10,98 @@
         </author>
         <description>计算机基础 &amp; 编程笔记</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 10 Dec 2021 14:38:56 +0800</pubDate>
-        <lastBuildDate>Fri, 10 Dec 2021 14:38:56 +0800</lastBuildDate>
+        <pubDate>Mon, 20 Dec 2021 20:41:01 +0800</pubDate>
+        <lastBuildDate>Mon, 20 Dec 2021 20:41:01 +0800</lastBuildDate>
         <category term="关键词1" />
         <category term="关键词2" />
+        <item>
+            <guid isPermalink="true">https://hazuki.cn/computer-science/operating-system/Chapter1-Introduction/</guid>
+            <title>Chapter 1 Introduction</title>
+            <link>https://hazuki.cn/computer-science/operating-system/Chapter1-Introduction/</link>
+            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
+            <category term="操作系统" scheme="https://hazuki.cn/categories/computer-science/operating-system/" />
+            <category term="操作系统" scheme="https://hazuki.cn/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
+            <pubDate>Mon, 20 Dec 2021 20:41:01 +0800</pubDate>
+            <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
+书籍：操作系统概念 (Opertating System Concepts)、操作系统导论 (OSTEP)&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUhONDExOTdLbw==&#34;&gt;https://www.bilibili.com/video/BV1HN41197Ko&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h1&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;An operating system is  &lt;code&gt;software&lt;/code&gt;  that  &lt;code class=&#34;blue&#34;&gt;manages a computer’s hardware&lt;/code&gt; . It also  &lt;code class=&#34;red&#34;&gt;provides a basis&lt;/code&gt;  for  &lt;code class=&#34;aqua&#34;&gt;application programs&lt;/code&gt;  and acts as an  &lt;code class=&#34;pink&#34;&gt;intermediary&lt;/code&gt;  between the computer user and the computer hardware. An amazing aspect of operating systems is how they vary in accomplishing these tasks in a wide variety of computing environments.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;操作系统是 &lt;code class=&#34;blue&#34;&gt;管理计算机硬件&lt;/code&gt; 的 &lt;code&gt;软件&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;它还为 &lt;code class=&#34;aqua&#34;&gt;应用程序&lt;/code&gt; 提供 &lt;code class=&#34;red&#34;&gt;基础&lt;/code&gt; ，并在 &lt;code&gt;计算机用户&lt;/code&gt; 和 &lt;code&gt;计算机硬件&lt;/code&gt; 之间充当 &lt;code class=&#34;pink&#34;&gt;中介&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;操作系统的一个令人惊异的方面是，它们在 &lt;code class=&#34;aqua&#34;&gt;各种各样的计算环境&lt;/code&gt; 中如何完成这些任务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;为了探索 &lt;code class=&#34;purple&#34;&gt;操作系统&lt;/code&gt; 在现代计算环境中的角色，首先理解 &lt;code class=&#34;blue&#34;&gt;计算机硬件&lt;/code&gt; 的组织和架构是很重要的。这包括 CPU、内存、I/O 设备以及存储。操作系统的一个基本职责是将这些 &lt;code class=&#34;red&#34;&gt;资源分配&lt;/code&gt; 给程序。&lt;/p&gt;
+&lt;p&gt;因为操作系统庞大而复杂，所以必须 &lt;code class=&#34;aqua&#34;&gt;一块一块地(piece by piece)&lt;/code&gt;  创建它。每个部分都应该是系统中 &lt;code class=&#34;pink&#34;&gt;明确描述(well-delineated)&lt;/code&gt;  的一部分，具有仔细定义的 &lt;code class=&#34;grey&#34;&gt;输入&lt;/code&gt; 、 &lt;code class=&#34;grey&#34;&gt;输出&lt;/code&gt; 和 &lt;code class=&#34;red&#34;&gt;功能&lt;/code&gt; 。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在这一章中，我们提供了一个当代 &lt;code class=&#34;blue&#34;&gt;计算机系统&lt;/code&gt; 的主要组成部分以及 &lt;code class=&#34;aqua&#34;&gt;操作系统所提供的功能&lt;/code&gt; 的一般概述。此外，我们还讨论了几个主题，以帮助为本文的其余部分打下基础：
+&lt;ol&gt;
+&lt;li&gt;操作系统中使用的 &lt;code class=&#34;pink&#34;&gt;数据结构&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&#34;red&#34;&gt;计算环境 (computing environments)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;以及 &lt;code class=&#34;aqua&#34;&gt;开源&lt;/code&gt; 和免费的操作系统&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;操作系统的功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统的功能&#34;&gt;#&lt;/a&gt; 操作系统的功能&lt;/h2&gt;
+&lt;p&gt;我们从 &lt;code class=&#34;red&#34;&gt;操作系统&lt;/code&gt; 在整个 &lt;code class=&#34;blue&#34;&gt;计算机系统&lt;/code&gt; 中的角色开始讨论。&lt;/p&gt;
+&lt;p&gt;计算机系统可以大致分为四个部分: &lt;code class=&#34;aqua&#34;&gt;硬件&lt;/code&gt; 、 &lt;code class=&#34;red&#34;&gt;操作系统&lt;/code&gt; 、 &lt;code class=&#34;blue&#34;&gt;应用程序&lt;/code&gt; 和 &lt;code class=&#34;grey&#34;&gt;用户&lt;/code&gt; ，如图所示。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/computer-science/operating-system/Chapter1-Introduction/Untitled_0.png&#34; alt=&#34;Untitled_0&#34; width=&#34;600px&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&#34;aqua&#34;&gt;硬件&lt;/code&gt; ：CPU、内存和 I/O 设备等，为系统提供 &lt;code class=&#34;aqua&#34;&gt;基本的计算资源&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;code class=&#34;blue&#34;&gt;应用程序&lt;/code&gt; ：如文字处理程序、电子表格程序、编译器和网页浏览器，定义了这些 &lt;code class=&#34;red&#34;&gt;资源&lt;/code&gt; 用来解决用户的计算问题的 &lt;code class=&#34;blue&#34;&gt;方式&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;code class=&#34;red&#34;&gt;操作系统&lt;/code&gt; ： &lt;code class=&#34;pink&#34;&gt;控制硬件&lt;/code&gt; ，并为不同的用户 &lt;code class=&#34;purple&#34;&gt;协调&lt;/code&gt; 各种应用程序对硬件的使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;We can also view a computer system as consisting of  &lt;code&gt;hardware&lt;/code&gt; ,  &lt;code&gt;software&lt;/code&gt; , and  &lt;code&gt;data&lt;/code&gt; . The operating system provides the  &lt;code class=&#34;red&#34;&gt;means&lt;/code&gt;  for  &lt;code class=&#34;blue&#34;&gt;proper use&lt;/code&gt;  of these resources in the operation of the computer system. An operating system is similar to a government. Like a government, it performs no useful function by itself. It simply  &lt;code class=&#34;aqua&#34;&gt;provides an environment&lt;/code&gt;  within which other programs can do useful work.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们也可以把计算机系统看作是由 &lt;code&gt;硬件&lt;/code&gt; 、 &lt;code&gt;软件&lt;/code&gt; 和 &lt;code&gt;数据&lt;/code&gt; 组成的。操作系统提供了在计算机系统的运行中 &lt;code class=&#34;blue&#34;&gt;正确使用&lt;/code&gt; 这些资源的 &lt;code class=&#34;red&#34;&gt;方法&lt;/code&gt; 。操作系统类似于政府。就像政府一样，它自己不能发挥任何有用的功能。它只是 &lt;code class=&#34;aqua&#34;&gt;提供了一个环境&lt;/code&gt; ，其他程序可以在其中完成有用的工作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;操作系统的定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统的定义&#34;&gt;#&lt;/a&gt; 操作系统的定义&lt;/h3&gt;
+&lt;p&gt;一般来说，我们 &lt;code class=&#34;blue&#34;&gt;没有&lt;/code&gt; 一个关于操作系统的完全准确的定义。&lt;/p&gt;
+&lt;p&gt;操作系统之所以存在，是因为它们 &lt;code class=&#34;pink&#34;&gt;提供了一种合理的方法&lt;/code&gt; 来解决 &lt;code class=&#34;aqua&#34;&gt;创建可用的计算系统&lt;/code&gt; 的问题。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&#34;aqua&#34;&gt;计算机系统&lt;/code&gt; 的根本目的是，执行程序并使解决用户问题变得更容易。 &lt;code class=&#34;orange&#34;&gt;计算机硬件&lt;/code&gt; 就是为了这个目标而构建的。&lt;/li&gt;
+&lt;li&gt;由于单独的裸硬件不是特别容易使用，所以开发了 &lt;code class=&#34;blue&#34;&gt;应用程序&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;这些程序需要某些 &lt;code class=&#34;red&#34;&gt;共同的操作&lt;/code&gt; ，例如控制 I/O 设备。这些控制和分配资源的共同的功能被整合到一个软件模块中： &lt;code class=&#34;purple&#34;&gt;操作系统&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;操作系统的组成部分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统的组成部分&#34;&gt;#&lt;/a&gt; 操作系统的组成部分&lt;/h3&gt;
+&lt;p&gt;此外，对于究竟什么属于 &lt;code class=&#34;aqua&#34;&gt;操作系统的一部分&lt;/code&gt; ，我们 &lt;code class=&#34;blue&#34;&gt;没有&lt;/code&gt; 一个普遍接受的定义。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一个简单的观点是，操作系统包括当你订购 “操作系统” 时，销售商所提供的所有东西。然而，操作系统所包含的特性在不同的系统之间差别很大：有些系统占用的空间不足 1MB，甚至缺乏全屏编辑器；而另一些系统则需要数 GB 的空间，并且完全基于图形窗口系统。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本书所采用的定义：&lt;/p&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;A more common definition, and the one that we usually follow, is that  &lt;code&gt;the operating system&lt;/code&gt;  is  &lt;code class=&#34;blue&#34;&gt;the one program running at all times&lt;/code&gt;  on the computer—usually called the  &lt;code class=&#34;red&#34;&gt;kernel&lt;/code&gt; .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个比较公认的定义，也是我们通常遵循的定义是， &lt;code&gt;操作系统&lt;/code&gt; 是在计算机上 &lt;code class=&#34;blue&#34;&gt;始终运行的程序&lt;/code&gt;  —— 通常称为 &lt;code class=&#34;red&#34;&gt;内核&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info no-icon&#34;&gt;
+&lt;p&gt;除了内核之外，还有另外两种类型的程序：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&#34;pink&#34;&gt;系统程序&lt;/code&gt; ：与操作系统相关联，但不是内核的必要组成部分；&lt;/li&gt;
+&lt;li&gt;&lt;code class=&#34;blue&#34;&gt;应用程序&lt;/code&gt; ，包括所有与系统操作无关的程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然而，现在如果我们着眼于 &lt;code class=&#34;blue&#34;&gt;移动设备&lt;/code&gt; 的操作系统，我们会再次看到，构成操作系统的功能的数量正在增加。移动设备的操作系统通常不仅包括一个核心的内核，还包括一个 &lt;code class=&#34;red&#34;&gt;中间件 (middleware)&lt;/code&gt; ，它是为 &lt;code class=&#34;aqua&#34;&gt;应用程序开发人员&lt;/code&gt; 提供额外服务的一组 &lt;code class=&#34;orange&#34;&gt;软件框架&lt;/code&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;note success no-icon&#34;&gt;
+&lt;p&gt;总之，就我们的目的而言，操作系统包括 &lt;code class=&#34;red&#34;&gt;始终运行的内核&lt;/code&gt; 、简化应用程序开发并提供功能的 &lt;code class=&#34;blue&#34;&gt;中间件框架&lt;/code&gt; ，以及在系统运行时帮助管理系统的 &lt;code class=&#34;aqua&#34;&gt;系统程序&lt;/code&gt; 。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;本文的大部分内容都与通用操作系统的内核有关，但为了全面解释操作系统的设计和操作，还会根据需要讨论其他组件。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://hazuki.cn/computer-science/computer-network/network-layer-1/</guid>
             <title>第4章 网络层：数据平面</title>
