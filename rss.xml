@@ -3,8 +3,8 @@
     <channel>
         <title></title>
         <subtitle>葉月書架</subtitle>
-        <icon>https://hazuki.cn/images/favicon.ico</icon>
-        <link>https://hazuki.cn</link>
+        <icon>https://hazuki.moe/images/favicon.ico</icon>
+        <link>https://hazuki.moe</link>
         <author>
           <name>Hazuki 叶月</name>
         </author>
@@ -15,12 +15,12 @@
         <category term="关键词1" />
         <category term="关键词2" />
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/computer-organization/Chapter1-Computer-Abstractions-and-Technology/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/computer-organization/Chapter1-Computer-Abstractions-and-Technology/</guid>
             <title>Chapter 1 Computer Abstractions and Technology</title>
-            <link>https://hazuki.cn/computer-science/computer-organization/Chapter1-Computer-Abstractions-and-Technology/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="计算机组成原理" scheme="https://hazuki.cn/categories/computer-science/computer-organization/" />
-            <category term="计算机组成原理" scheme="https://hazuki.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" />
+            <link>https://hazuki.moe/computer-science/computer-organization/Chapter1-Computer-Abstractions-and-Technology/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="计算机组成原理" scheme="https://hazuki.moe/categories/computer-science/computer-organization/" />
+            <category term="计算机组成原理" scheme="https://hazuki.moe/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" />
             <pubDate>Wed, 29 Dec 2021 17:55:29 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
@@ -1662,12 +1662,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/operating-system/Chapter1-Introduction/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/operating-system/Chapter1-Introduction/</guid>
             <title>Chapter 1 Introduction</title>
-            <link>https://hazuki.cn/computer-science/operating-system/Chapter1-Introduction/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="操作系统" scheme="https://hazuki.cn/categories/computer-science/operating-system/" />
-            <category term="操作系统" scheme="https://hazuki.cn/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
+            <link>https://hazuki.moe/computer-science/operating-system/Chapter1-Introduction/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="操作系统" scheme="https://hazuki.moe/categories/computer-science/operating-system/" />
+            <category term="操作系统" scheme="https://hazuki.moe/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
             <pubDate>Mon, 20 Dec 2021 20:41:01 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
@@ -2083,13 +2083,13 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/computer-network/network-layer-1/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/computer-network/network-layer-1/</guid>
             <title>第4章 网络层：数据平面</title>
-            <link>https://hazuki.cn/computer-science/computer-network/network-layer-1/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="计算机网络" scheme="https://hazuki.cn/categories/computer-science/computer-network/" />
-            <category term="计算机网络" scheme="https://hazuki.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
-            <category term="网络层" scheme="https://hazuki.cn/tags/%E7%BD%91%E7%BB%9C%E5%B1%82/" />
+            <link>https://hazuki.moe/computer-science/computer-network/network-layer-1/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="计算机网络" scheme="https://hazuki.moe/categories/computer-science/computer-network/" />
+            <category term="计算机网络" scheme="https://hazuki.moe/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+            <category term="网络层" scheme="https://hazuki.moe/tags/%E7%BD%91%E7%BB%9C%E5%B1%82/" />
             <pubDate>Fri, 10 Dec 2021 14:38:56 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
@@ -2358,13 +2358,13 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/computer-network/transport-layer/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/computer-network/transport-layer/</guid>
             <title>第3章 传输层</title>
-            <link>https://hazuki.cn/computer-science/computer-network/transport-layer/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="计算机网络" scheme="https://hazuki.cn/categories/computer-science/computer-network/" />
-            <category term="计算机网络" scheme="https://hazuki.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
-            <category term="传输层" scheme="https://hazuki.cn/tags/%E4%BC%A0%E8%BE%93%E5%B1%82/" />
+            <link>https://hazuki.moe/computer-science/computer-network/transport-layer/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="计算机网络" scheme="https://hazuki.moe/categories/computer-science/computer-network/" />
+            <category term="计算机网络" scheme="https://hazuki.moe/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+            <category term="传输层" scheme="https://hazuki.moe/tags/%E4%BC%A0%E8%BE%93%E5%B1%82/" />
             <pubDate>Sat, 04 Dec 2021 10:35:02 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
@@ -2732,14 +2732,14 @@ However, we’ll also see that multiplexing / demultiplexing in  &lt;code class=
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC1%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E9%A2%84%E5%A4%84%E7%90%86/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC1%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E9%A2%84%E5%A4%84%E7%90%86/</guid>
             <title>第1章 模型预处理</title>
-            <link>https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC1%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E9%A2%84%E5%A4%84%E7%90%86/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="机器学习" scheme="https://hazuki.cn/categories/computer-science/machine-learing/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
-            <category term="机器学习" scheme="https://hazuki.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/tags/Scikit-learn-Cookbook/" />
+            <link>https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC1%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E9%A2%84%E5%A4%84%E7%90%86/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="机器学习" scheme="https://hazuki.moe/categories/computer-science/machine-learing/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
+            <category term="机器学习" scheme="https://hazuki.moe/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/tags/Scikit-learn-Cookbook/" />
             <pubDate>Fri, 03 Dec 2021 18:44:50 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文转载自：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vd2l6YXJkZm9yY2VsL3NrbGVhcm4tY2I=&#34;&gt;https://gitee.com/wizardforcel/sklearn-cb&lt;/span&gt;&lt;br /&gt;
@@ -3675,14 +3675,14 @@ B
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC2%E7%AB%A0%20%E5%A4%84%E7%90%86%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC2%E7%AB%A0%20%E5%A4%84%E7%90%86%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</guid>
             <title>第2章 处理线性模型</title>
-            <link>https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC2%E7%AB%A0%20%E5%A4%84%E7%90%86%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="机器学习" scheme="https://hazuki.cn/categories/computer-science/machine-learing/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
-            <category term="机器学习" scheme="https://hazuki.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/tags/Scikit-learn-Cookbook/" />
+            <link>https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC2%E7%AB%A0%20%E5%A4%84%E7%90%86%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="机器学习" scheme="https://hazuki.moe/categories/computer-science/machine-learing/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
+            <category term="机器学习" scheme="https://hazuki.moe/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/tags/Scikit-learn-Cookbook/" />
             <pubDate>Fri, 03 Dec 2021 18:44:50 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文转载自：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vd2l6YXJkZm9yY2VsL3NrbGVhcm4tY2I=&#34;&gt;https://gitee.com/wizardforcel/sklearn-cb&lt;/span&gt;&lt;br /&gt;
@@ -4068,14 +4068,14 @@ LarsCV(copy_X=True, cv=None, eps=2.2204460492503131e-16, fit_intercept=True,
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC3%E7%AB%A0%20%E4%BD%BF%E7%94%A8%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC3%E7%AB%A0%20%E4%BD%BF%E7%94%A8%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B/</guid>
             <title>第3章 使用距离向量构建模型</title>
-            <link>https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC3%E7%AB%A0%20%E4%BD%BF%E7%94%A8%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="机器学习" scheme="https://hazuki.cn/categories/computer-science/machine-learing/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
-            <category term="机器学习" scheme="https://hazuki.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/tags/Scikit-learn-Cookbook/" />
+            <link>https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC3%E7%AB%A0%20%E4%BD%BF%E7%94%A8%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="机器学习" scheme="https://hazuki.moe/categories/computer-science/machine-learing/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
+            <category term="机器学习" scheme="https://hazuki.moe/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/tags/Scikit-learn-Cookbook/" />
             <pubDate>Fri, 03 Dec 2021 18:44:50 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文转载自：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vd2l6YXJkZm9yY2VsL3NrbGVhcm4tY2I=&#34;&gt;https://gitee.com/wizardforcel/sklearn-cb&lt;/span&gt;&lt;br /&gt;
@@ -4343,14 +4343,14 @@ $ wget http://blog.trenthauck.com/assets/headshot.jpg
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC4%E7%AB%A0%20%E4%BD%BF%E7%94%A8%20scikit-learn%20%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC4%E7%AB%A0%20%E4%BD%BF%E7%94%A8%20scikit-learn%20%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB/</guid>
             <title>第4章 使用 scikit-learn 对数据分类</title>
-            <link>https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC4%E7%AB%A0%20%E4%BD%BF%E7%94%A8%20scikit-learn%20%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="机器学习" scheme="https://hazuki.cn/categories/computer-science/machine-learing/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
-            <category term="机器学习" scheme="https://hazuki.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/tags/Scikit-learn-Cookbook/" />
+            <link>https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC4%E7%AB%A0%20%E4%BD%BF%E7%94%A8%20scikit-learn%20%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="机器学习" scheme="https://hazuki.moe/categories/computer-science/machine-learing/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
+            <category term="机器学习" scheme="https://hazuki.moe/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/tags/Scikit-learn-Cookbook/" />
             <pubDate>Fri, 03 Dec 2021 18:44:50 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文转载自：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vd2l6YXJkZm9yY2VsL3NrbGVhcm4tY2I=&#34;&gt;https://gitee.com/wizardforcel/sklearn-cb&lt;/span&gt;&lt;br /&gt;
@@ -4712,14 +4712,14 @@ y = βx + b
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC5%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E5%90%8E%E5%A4%84%E7%90%86/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC5%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E5%90%8E%E5%A4%84%E7%90%86/</guid>
             <title>第5章 模型后处理</title>
-            <link>https://hazuki.cn/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC5%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E5%90%8E%E5%A4%84%E7%90%86/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="机器学习" scheme="https://hazuki.cn/categories/computer-science/machine-learing/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
-            <category term="机器学习" scheme="https://hazuki.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
-            <category term="Scikit-learn Cookbook" scheme="https://hazuki.cn/tags/Scikit-learn-Cookbook/" />
+            <link>https://hazuki.moe/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC5%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E5%90%8E%E5%A4%84%E7%90%86/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="机器学习" scheme="https://hazuki.moe/categories/computer-science/machine-learing/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" />
+            <category term="机器学习" scheme="https://hazuki.moe/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+            <category term="Scikit-learn Cookbook" scheme="https://hazuki.moe/tags/Scikit-learn-Cookbook/" />
             <pubDate>Fri, 03 Dec 2021 18:44:50 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文转载自：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vd2l6YXJkZm9yY2VsL3NrbGVhcm4tY2I=&#34;&gt;https://gitee.com/wizardforcel/sklearn-cb&lt;/span&gt;&lt;br /&gt;
@@ -5016,12 +5016,12 @@ max_features = &amp;#123;auto, log2, None&amp;#125;
 &lt;figure class=&#34;highlight py&#34;&gt;&lt;figcaption data-lang=&#34;Python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; joblib&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;dump&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rf&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;rf.clf&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;rf.clf&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token string&#34;&gt;&#39;rf.clf_01.npy&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token string&#34;&gt;&#39;rf.clf_02.npy&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token string&#34;&gt;&#39;rf.clf_03.npy&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token string&#34;&gt;&#39;rf.clf_04.npy&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token string&#34;&gt;&#39;rf.clf_05.npy&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token string&#34;&gt;&#39;rf.clf_06.npy&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;             &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/hexo/Theme.Shoka/01_Shoka/</guid>
+            <guid isPermalink="true">https://hazuki.moe/hexo/Theme.Shoka/01_Shoka/</guid>
             <title>Shoka主题：修改切换标签时更换标题</title>
-            <link>https://hazuki.cn/hexo/Theme.Shoka/01_Shoka/</link>
-            <category term="Hexo博客搭建" scheme="https://hazuki.cn/categories/hexo/" />
-            <category term="Shoka主题" scheme="https://hazuki.cn/categories/hexo/Theme-Shoka/" />
-            <category term="Shoka主题" scheme="https://hazuki.cn/tags/Shoka%E4%B8%BB%E9%A2%98/" />
+            <link>https://hazuki.moe/hexo/Theme.Shoka/01_Shoka/</link>
+            <category term="Hexo博客搭建" scheme="https://hazuki.moe/categories/hexo/" />
+            <category term="Shoka主题" scheme="https://hazuki.moe/categories/hexo/Theme-Shoka/" />
+            <category term="Shoka主题" scheme="https://hazuki.moe/tags/Shoka%E4%B8%BB%E9%A2%98/" />
             <pubDate>Thu, 02 Dec 2021 13:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;Shoka 主题默认在进行标签切换时，会将标题修改为 &lt;code class=&#34;red&#34;&gt;(´Д｀)大変だ！&lt;/code&gt; ，同时修改图标，虽然挺可爱 hh，但是当标签页多了想来回切换时不方便定位。&lt;/p&gt;
@@ -5040,13 +5040,13 @@ max_features = &amp;#123;auto, log2, None&amp;#125;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://hazuki.cn/computer-science/computer-network/application-layer/</guid>
+            <guid isPermalink="true">https://hazuki.moe/computer-science/computer-network/application-layer/</guid>
             <title>第2章 应用层</title>
-            <link>https://hazuki.cn/computer-science/computer-network/application-layer/</link>
-            <category term="计算机科学" scheme="https://hazuki.cn/categories/computer-science/" />
-            <category term="计算机网络" scheme="https://hazuki.cn/categories/computer-science/computer-network/" />
-            <category term="计算机网络" scheme="https://hazuki.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
-            <category term="应用层" scheme="https://hazuki.cn/tags/%E5%BA%94%E7%94%A8%E5%B1%82/" />
+            <link>https://hazuki.moe/computer-science/computer-network/application-layer/</link>
+            <category term="计算机科学" scheme="https://hazuki.moe/categories/computer-science/" />
+            <category term="计算机网络" scheme="https://hazuki.moe/categories/computer-science/computer-network/" />
+            <category term="计算机网络" scheme="https://hazuki.moe/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+            <category term="应用层" scheme="https://hazuki.moe/tags/%E5%BA%94%E7%94%A8%E5%B1%82/" />
             <pubDate>Tue, 30 Nov 2021 23:50:57 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
