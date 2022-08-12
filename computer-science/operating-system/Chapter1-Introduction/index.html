@@ -117,12 +117,12 @@ Hazuki の 小屋 =  = 葉月書架</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/deef1a0cly8gy5nz7f2zhj21a20u0q77.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/deef1a0cly8gy69qhk15pj21hc0u00wj.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/deef1a0cly8gy122s02qbj20yt0u0gro.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/deef1a0cly8gy5o64ph2jj21800ordlj.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/deef1a0cly8gy5o1m14ogj216d0u07dk.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/deef1a0cly8gy0yihkpsej21e00u07at.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/deef1a0cly8gy0wt2eo0lj21hc0u0qb4.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/deef1a0cly8gy5nz7f2zhj21a20u0q77.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/deef1a0cly8gy5pknvtagj21330rsdn3.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/deef1a0cly8gy122s02qbj20yt0u0gro.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/deef1a0cly8gy5o0ulm1zj215o0patge.jpg"></li>
         </ul>
       </div>
     </header>
@@ -197,9 +197,9 @@ Hazuki の 小屋 =  = 葉月書架</title>
 <li>
 <p>由于操作系统是即庞大又复杂的，它必须 <code class="pink">一部分一部分地 (piece by piece)</code>  被构造。</p>
 <div class="note primary">
+<p>Each of these pieces should be a  <code class="cyan">well-delineated portion</code>  of the system, with carefully defined  <code class="red">inputs</code> ,  <code class="blue">outputs</code> , and  <code class="purple">functions</code> .</p>
 <ul>
-<li>Each of these pieces should be a  <code class="cyan">well-delineated portion</code>  of the system, with carefully defined  <code class="red">inputs</code> ,  <code class="blue">outputs</code> , and  <code class="purple">functions</code> .<br />
- 每一部分都应该是系统中 <span class="cyan">明确定义的一部分</span>，具有仔细定义的 <code class="red">输入</code> 、 <code class="blue">输出</code> 和 <code class="purple">功能</code> 。</li>
+<li>每一部分都应该是系统中 <span class="cyan">明确定义的一部分</span>，具有仔细定义的 <code class="red">输入</code> 、 <code class="blue">输出</code> 和 <code class="purple">功能</code> 。</li>
 </ul>
 </div>
 </li>
@@ -262,40 +262,61 @@ Hazuki の 小屋 =  = 葉月書架</title>
 </li>
 </ol>
 <h1 id="计算机系统的组成"><a class="anchor" href="#计算机系统的组成">#</a> 计算机系统的组成</h1>
-<p>现代通用计算机系统由一个或多个 <code class="aqua">CPU</code>  和多个 <code class="blue">设备控制器 (device controllers)</code>  组成，通过 <code class="red">公用总线 (common bus)</code>  相连。</p>
-<p>该总线提供了组件和 <code class="pink">共享内存 (shared memory)</code>  之间的访问，如图所示。</p>
+<div class="note primary">
+<p>现代的通用 <code class="blue">计算机系统</code> 由 <code class="cyan">一个或多个 CPU</code>  和许多 <code class="pink">设备控制器</code> 组成，它们之间通过 <code class="aqua">公用总线</code> 相连，该总线提供了这些组件和共享的 <code class="purple">内存</code> 之间的访问，如图所示。</p>
+</div>
 <p><img data-src="/assets/computer-science/operating-system/Chapter1-Introduction/Untitled_1.png" alt="Untitled_1" width="600px" /></p>
-<div class="note primary no-icon">
-<p>每个 <code class="blue">设备控制器</code> 负责 <code class="red">一类特定的设备</code>  (例如，磁盘驱动器、音频设备或图形显示)。根据控制器的不同，一个控制器可以连接多个设备。例如，一个系统 USB 接口可以连接到一个 USB 集线器 (USB hub) 上，该集线器可以连接多个设备。</p>
-</div>
 <ol>
 <li>
-<p>设备控制器维护一些 <code class="aqua">本地缓冲区存储器</code> 和一组 <code class="purple">专用寄存器</code> 。设备控制器负责在其控制的 <code class="red">外围设备</code> 与其 <code class="aqua">本地缓冲区存储器</code> 之间移动数据。</p>
-</li>
-<li>
-<p>通常，操作系统为每个设备控制器都有一个 <code class="blue">设备驱动程序 (device driver)</code> ，它属于操作系统的一部分。这个设备驱动程序理解设备控制器，并为操作系统的其余部分提供 <code class="orange">设备的统一接口(uniform interface)</code> 。CPU 和设备控制器可以 <code class="red">并行执行</code> ，竞争 <code class="aqua">内存周期 (memory cycles)</code> <span class="red">(★)</span>。为了确保对共享内存的有序访问，需要 <code class="grey">内存控制器</code> 来同步对内存的访问。</p>
-</li>
-</ol>
-<p>在下面的小节中，我们将描述这样一个系统如何运行的一些基础，重点关注系统的三个关键方面。我们从 <code class="red">中断</code> 开始，它向 CPU 发出需要注意的事件的警报。然后讨论 <code class="aqua">存储结构</code> 和 <code class="blue">I/O 结构</code> 。</p>
-<h2 id="中断interrupts"><a class="anchor" href="#中断interrupts">#</a> 中断 (Interrupts)</h2>
-<p>让我们考虑一个典型的计算机操作：一个执行 <code class="aqua">I/O 操作</code> 的程序。</p>
-<ol>
-<li>
-<p>为了启动 I/O 操作， <code class="blue">设备驱动程序</code> 加载 <code class="red">设备控制器</code> 中相应的寄存器。</p>
-</li>
-<li>
-<p><code class="red">设备控制器</code> 进而检查这些寄存器的内容，以决定采取什么操作 (例如 “从键盘读取一个字符”)。控制器开始将数据从设备传输到本地缓冲区。</p>
-<div class="note primary no-icon">
-<p>一旦数据传输完成， <code class="red">设备控制器</code> <span class="aqua">通知</span> <code class="blue">设备驱动程序</code> 它已经完成了它的操作。</p>
+<p>每个 <strong class="red">设备控制器 (device controllers)</strong> 负责 <code class="blue">一类特定的设备</code> （例如，磁盘驱动器、音频设备或图形显示器）。设备控制器维护一些 <code class="cyan">本地缓冲区存储器 (local buffer storage)</code>  和一组 <code class="aqua">专用寄存器</code> ，并负责在其 <code class="pink">控制的外围设备</code> 与本地缓冲区存储器之间移动数据。</p>
+<div class="note info">
+<p>Depending on the controller,  <code class="blue">more than one device</code>  may be attached. For instance, one  <code class="cyan">system USB port</code>  can connect to a  <code class="red">USB hub</code> , to which several devices can connect.</p>
+<ul>
+<li>根据控制器的不同，一个控制器可以 <span class="blue">连接多个设备</span>。例如，一个 <span class="cyan">系统 USB 接口</span> 可以连接到一个 <span class="red">USB 集线器</span> 上，该集线器可以连接多个设备。</li>
+</ul>
 </div>
 </li>
 <li>
-<p>然后， <code class="blue">设备驱动程序</code> 将控制权交给 <code class="purple">操作系统</code> 的其他部分，如果操作是读操作，可能返回数据或指向数据的指针。对于其他操作，设备驱动程序返回 <code class="aqua">状态信息</code> ，如 “写操作成功完成” 或 “设备繁忙”。</p>
+<p>通常， <code class="purple">操作系统</code> 对于每个设备控制器都有一个 <strong class="blue">设备驱动程序 (device driver)</strong>，该程序理解设备控制器，并为操作系统的其余部分提供设备的 <code class="red">统一接口 (uniform interface)</code> 。</p>
+<div class="note primary">
+<p>The  <code class="blue">CPU</code>  and the  <code class="pink">device controllers</code>  can  <code class="aqua">execute in parallel</code> , competing for  <code class="purple">memory cycles</code> . To ensure orderly access to the shared memory, a  <code class="cyan">memory controller</code>  synchronizes access to the memory.</p>
+<ul>
+<li><span class="blue">CPU</span> 和 <span class="pink">设备控制器</span> 可以 <span class="aqua">并行执行</span>，竞争 <span class="purple">内存周期</span>。为了确保对共享内存的有序访问，需要 <span class="cyan">内存控制器</span> 来同步对内存的访问。</li>
+</ul>
+</div>
 </li>
 </ol>
-<div class="note info no-icon">
-<p>但是 <code class="red">设备控制器</code> <span class="aqua">如何通知</span> <code class="blue">设备驱动程序</code> 它已经完成了它的操作呢？这是通过一个 <code class="pink">中断</code> 完成的。</p>
-</div>
+<h2 id="中断"><a class="anchor" href="#中断">#</a> 中断</h2>
+<p>在接下来的小节中，我们将描述这样的一个系统是如何运行的一些基础知识，重点关注系统的三个方面： <code class="pink">中断</code> 、 <code class="blue">存储结构</code> 和  <code class="aqua">I/O 结构</code> 。</p>
+<details class="info"><summary>An introduction of interrupts</summary><div>
+<p>让我们首先考虑一个典型的计算机操作：一个执行 <ins class="dot"><strong class="blue">I/O 操作</strong></ins> 的程序。</p>
+<ul>
+<li>
+<p>To start an I/O operation, the  <code class="blue">device driver</code>  loads the  <code class="aqua">appropriate registers</code>  in the  <code class="pink">device controller</code> .</p>
+<ul>
+<li>为了启动 I/O 操作，<span class="blue">设备驱动程序</span> 加载 <span class="pink">设备控制器</span> 中 <span class="aqua">相应的寄存器</span>。</li>
+</ul>
+</li>
+<li>
+<p>The  <code class="pink">device controller</code> , in turn,  <code class="cyan">examines the contents</code>  of these registers to determine what action to take (such as “read a character from the keyboard”). The controller starts the  <code class="purple">transfer of data</code>  from the device to its  <code class="aqua">local buffer</code> . Once the transfer of data is complete, the device controller <ins class="dot"><strong class="red">informs the device driver</strong></ins> that it has finished its operation.</p>
+<ul>
+<li>
+<p><span class="pink">设备控制器</span> 进而检查这些 <span class="cyan">寄存器的内容</span>，以决定采取什么操作（例如，从键盘上读取一个字符）。控制器开始将 <span class="purple">数据从设备传输</span> 到它的 <span class="aqua">本地缓冲区</span>。</p>
+</li>
+<li>
+<p>一旦数据传输完成，设备控制器 <span class="red">通知设备驱动程序</span> 它已经完成了它的操作。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The  <code class="blue">device driver</code>  then gives control to other parts of the  <code class="purple">operating system</code> , possibly returning the data or a pointer to the data if the operation was a read. For other operations, the device driver returns status information such as “write completed successfully” or “device busy”.</p>
+<ul>
+<li>然后，<span class="blue">设备驱动程序</span> 将控制权交给 <span class="purple">操作系统</span> 的其他部分，如果操作是读操作，则可能返回数据或指向数据的指针。对于其他操作，设备驱动程序返回状态信息，如 “写操作成功完成” 或 “设备繁忙”。</li>
+</ul>
+</li>
+</ul>
+<p>但是设备控制器是如何 <strong class="red">通知设备驱动程序</strong> 它已经完成了它的操作的呢？这是通过一个 <ins class="dot"><strong class="purple">中断 (interrupt)</strong></ins> 完成的。</p>
+</div></details>
 <h3 id="概览"><a class="anchor" href="#概览">#</a> 概览</h3>
 <ol>
 <li>
@@ -608,7 +629,7 @@ Hazuki の 小屋 =  = 葉月書架</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2022-08-12 14:24:30" itemprop="dateModified" datetime="2022-08-12T14:24:30+08:00">2022-08-12</time>
+    <time title="修改时间：2022-08-12 19:27:14" itemprop="dateModified" datetime="2022-08-12T19:27:14+08:00">2022-08-12</time>
   </span>
   <span id="computer-science/operating-system/Chapter1-Introduction/" class="item leancloud_visitors" data-flag-title="Chapter 1 Introduction" title="阅读次数">
       <span class="icon">
@@ -661,7 +682,7 @@ Hazuki の 小屋 =  = 葉月書架</title>
     <div class="item left">
       
 
-  <a href="/computer-science/computer-network/network-layer-1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;large&#x2F;deef1a0cly8gy5o37bg6sj21hc0qogtb.jpg" title="第4章 网络层：数据平面">
+  <a href="/computer-science/computer-network/network-layer-1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;large&#x2F;deef1a0cly8gy127iwzngj21hc0u0126.jpg" title="第4章 网络层：数据平面">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 计算机网络</span>
   <h3>第4章 网络层：数据平面</h3>
@@ -693,7 +714,7 @@ Hazuki の 小屋 =  = 葉月書架</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.</span> <span class="toc-text"> 操作系统的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.2.</span> <span class="toc-text"> 操作系统的定义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">2.</span> <span class="toc-text"> 计算机系统的组成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E6%96%ADinterrupts"><span class="toc-number">2.1.</span> <span class="toc-text"> 中断 (Interrupts)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%A7%88"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 概览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 中断的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%B8%AD%E6%96%AD%E6%9C%BA%E5%88%B6"><span class="toc-number">2.1.2.1.</span> <span class="toc-text"> 基本的中断机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%AD%E6%96%AD%E6%9C%BA%E5%88%B6"><span class="toc-number">2.1.2.2.</span> <span class="toc-text"> 现代操作系统的中断机制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text"> 存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 主存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%85%E5%AD%98"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 辅存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 存储器层次结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#io-%E7%BB%93%E6%9E%84"><span class="toc-number">2.3.</span> <span class="toc-text"> I&#x2F;O 结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%89%A7%E8%A1%8C"><span class="toc-number">3.</span> <span class="toc-text"> 操作系统的执行</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.</span> <span class="toc-text"> 操作系统的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.2.</span> <span class="toc-text"> 操作系统的定义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">2.</span> <span class="toc-text"> 计算机系统的组成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD"><span class="toc-number">2.1.</span> <span class="toc-text"> 中断</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%A7%88"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 概览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 中断的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%B8%AD%E6%96%AD%E6%9C%BA%E5%88%B6"><span class="toc-number">2.1.2.1.</span> <span class="toc-text"> 基本的中断机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%AD%E6%96%AD%E6%9C%BA%E5%88%B6"><span class="toc-number">2.1.2.2.</span> <span class="toc-text"> 现代操作系统的中断机制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text"> 存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 主存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%85%E5%AD%98"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 辅存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 存储器层次结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#io-%E7%BB%93%E6%9E%84"><span class="toc-number">2.3.</span> <span class="toc-text"> I&#x2F;O 结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%89%A7%E8%A1%8C"><span class="toc-number">3.</span> <span class="toc-text"> 操作系统的执行</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -810,66 +831,12 @@ Hazuki の 小屋 =  = 葉月書架</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<a href="/categories/hexo/" title="分类于 Hexo 博客搭建">Hexo 博客搭建</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/computer-network/" title="分类于 计算机网络">计算机网络</a>
+<a href="/categories/hexo/Theme-Shoka/" title="分类于 Shoka 主题">Shoka 主题</a>
 </div>
 
-    <span><a href="/computer-science/computer-network/transport-layer/" title="第3章 传输层">第3章 传输层</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/machine-learing/" title="分类于 机器学习">机器学习</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" title="分类于 Scikit-learn Cookbook">Scikit-learn Cookbook</a>
-</div>
-
-    <span><a href="/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC2%E7%AB%A0%20%E5%A4%84%E7%90%86%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/" title="第2章 处理线性模型">第2章 处理线性模型</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/machine-learing/" title="分类于 机器学习">机器学习</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" title="分类于 Scikit-learn Cookbook">Scikit-learn Cookbook</a>
-</div>
-
-    <span><a href="/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC3%E7%AB%A0%20%E4%BD%BF%E7%94%A8%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B/" title="第3章 使用距离向量构建模型">第3章 使用距离向量构建模型</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/operating-system/" title="分类于 操作系统">操作系统</a>
-</div>
-
-    <span><a href="/computer-science/operating-system/Chapter1-Introduction/" title="Chapter 1 Introduction">Chapter 1 Introduction</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/machine-learing/" title="分类于 机器学习">机器学习</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" title="分类于 Scikit-learn Cookbook">Scikit-learn Cookbook</a>
-</div>
-
-    <span><a href="/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC1%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E9%A2%84%E5%A4%84%E7%90%86/" title="第1章 模型预处理">第1章 模型预处理</a></span>
+    <span><a href="/hexo/Theme.Shoka/01_Shoka/" title="Shoka主题：修改切换标签时更换标题">Shoka主题：修改切换标签时更换标题</a></span>
   </li>
 
       
@@ -909,19 +876,47 @@ Hazuki の 小屋 =  = 葉月書架</title>
 <a href="/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" title="分类于 Scikit-learn Cookbook">Scikit-learn Cookbook</a>
 </div>
 
-    <span><a href="/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC4%E7%AB%A0%20%E4%BD%BF%E7%94%A8%20scikit-learn%20%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB/" title="第4章 使用 scikit-learn 对数据分类">第4章 使用 scikit-learn 对数据分类</a></span>
+    <span><a href="/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC3%E7%AB%A0%20%E4%BD%BF%E7%94%A8%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B/" title="第3章 使用距离向量构建模型">第3章 使用距离向量构建模型</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/hexo/" title="分类于 Hexo 博客搭建">Hexo 博客搭建</a>
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/hexo/Theme-Shoka/" title="分类于 Shoka 主题">Shoka 主题</a>
+<a href="/categories/computer-science/machine-learing/" title="分类于 机器学习">机器学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" title="分类于 Scikit-learn Cookbook">Scikit-learn Cookbook</a>
 </div>
 
-    <span><a href="/hexo/Theme.Shoka/01_Shoka/" title="Shoka主题：修改切换标签时更换标题">Shoka主题：修改切换标签时更换标题</a></span>
+    <span><a href="/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC2%E7%AB%A0%20%E5%A4%84%E7%90%86%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/" title="第2章 处理线性模型">第2章 处理线性模型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/operating-system/" title="分类于 操作系统">操作系统</a>
+</div>
+
+    <span><a href="/computer-science/operating-system/Chapter1-Introduction/" title="Chapter 1 Introduction">Chapter 1 Introduction</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/machine-learing/" title="分类于 机器学习">机器学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" title="分类于 Scikit-learn Cookbook">Scikit-learn Cookbook</a>
+</div>
+
+    <span><a href="/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC4%E7%AB%A0%20%E4%BD%BF%E7%94%A8%20scikit-learn%20%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB/" title="第4章 使用 scikit-learn 对数据分类">第4章 使用 scikit-learn 对数据分类</a></span>
   </li>
 
       
@@ -934,6 +929,32 @@ Hazuki の 小屋 =  = 葉月書架</title>
 </div>
 
     <span><a href="/computer-science/computer-network/application-layer/" title="第2章 应用层">第2章 应用层</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/computer-network/" title="分类于 计算机网络">计算机网络</a>
+</div>
+
+    <span><a href="/computer-science/computer-network/transport-layer/" title="第3章 传输层">第3章 传输层</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/machine-learing/" title="分类于 机器学习">机器学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/machine-learing/Scikit-learn-Cookbook/" title="分类于 Scikit-learn Cookbook">Scikit-learn Cookbook</a>
+</div>
+
+    <span><a href="/computer-science/machine-learing/Scikit-learn-Cookbook/%E7%AC%AC1%E7%AB%A0%20%E6%A8%A1%E5%9E%8B%E9%A2%84%E5%A4%84%E7%90%86/" title="第1章 模型预处理">第1章 模型预处理</a></span>
   </li>
 
   </ul>
@@ -958,13 +979,13 @@ Hazuki の 小屋 =  = 葉月書架</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">207k 字</span>
+    <span title="站点总字数">208k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:08</span>
+    <span title="站点阅读时长">3:09</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
